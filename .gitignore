@@ -2,3 +2,4 @@ venv
 .idea
 *.pyc
 db.sql
+sql_injects
