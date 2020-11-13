@@ -34,6 +34,7 @@ def list_users():
         try:
             query = f"SELECT secret FROM users WHERE secret = '{secret}' and username = 'root'"
             print(query)
+            # the request "db.execute(query)" in the next line must be replaced with "db.executescript(query)"
             db.execute(query)
             data = db.fetchone()
         except sqlite3.OperationalError:
